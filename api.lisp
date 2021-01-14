@@ -49,4 +49,5 @@
                                 ("X-Amz-Content-Sha256" . ,(aws-sdk/utils::sha-256 (or payload "")))
                                 ("Content-Type" . "application/x-amz-json-1.0")
                                 ,@headers)
-                     :content payload)))))
+                     :content payload
+                     :keep-alive nil)))))
